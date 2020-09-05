@@ -36,7 +36,7 @@ class App extends React.Component {
               ...snapShot.data()
             }
           });
-          console.log(this.state);
+          //console.log(this.state);
         });
         //if the userauth object comes back and its null, we want to set the currentuser to userAuth, which is null. so when the user logs out, we will set this currentuser to null
       } else {

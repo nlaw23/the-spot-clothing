@@ -35,12 +35,14 @@ class SignUp extends React.Component {
             //await for this to finish so we can then run this.setState to clear form
             await createUserProfileDocument(user, {displayName});
 
-            this.setState = {
+
+            this.setState({
                 displayName: '',
                 email: '',
                 password: '',
                 confirmPassword: ''
-            }
+            })
+            
         } catch (error) {
             console.error(error);
         }
