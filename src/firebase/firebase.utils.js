@@ -1,4 +1,4 @@
-//we do firebase/app because firebase has all of the utility libraries included. we dont want any were not using because they are large, so we can import individually the packages we need. we need to first import firebase to gain access to its elements, like auth and firebase.
+//we do firebase/app because firebase has all of the utility libraries included. we dont want any were not using because they are large, so we can import individually the packages we need. we need to first import firebase to gain access to its elements, like auth and firestore.
 import firebase from 'firebase/app';
 
 //we use firestore to take the auth.user object, whether it be a login form a third party or from our own sign up method, and store it in our own database to authentice custom generated accounts
@@ -24,7 +24,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
   const snapShot = await userRef.get(); // we use the reference object to either get or save data at this location in db
 
-  // if a piece of data does not exist in that location, meaning the user has not been inputed into the db, so we check if it exists using our snapshot var. if it doesnt exist, we create it taking in the displayname and email from the userAuth object. we also add a createdAt using the js date function to store when the account was stored. 
+  // if a piece of data does not exist in that location, meaning the user has not been inputed into the db, we check if it exists using our snapshot var. if it doesnt exist, we create it taking in the displayname and email from the userAuth object. we also add a createdAt using the js date function to store when the account was created. 
   if(!snapShot.exists) {
     const {displayName, email} = userAuth;
     const createdAt = new Date();

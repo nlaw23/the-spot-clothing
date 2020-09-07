@@ -28,7 +28,7 @@ class App extends React.Component {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
-        //when we call onsnapshot we get back the snapshot object which is where we get the data related to the user we just possibly stored if it was a new authentication or the data related to the user already stored in our database. we can use the .data method to actually retrieve that data. we store this data in an object in state called currentUser with the properties uid from the userauth object, along with the properties from the database, createdat, email, displayname, so that we can use the data from our database in our application. 
+        //when we call onsnapshot we get back the snapshot object which is where we get the data related to the user we just possibly stored if it was a new authentication or the data related to the user already stored in our database. we can use the .data method to actually retrieve that data. we store this data in an object in state called currentUser with the properties uid from the userauth object, along with the properties from the database, createdAt, email, displayName, so that we can use the data from our database in our application. 
         userRef.onSnapshot(snapShot => {
           this.setState({
             currentUser: {
