@@ -7,7 +7,7 @@
     padding: 0 35px 0 35px;
     font-size: 15px;
     background-color: black;
-    color: white;
+    color: whitesmoke;
     text-transform: uppercase;
     font-family: 'Open Sans Condensed';
     font-weight: bolder;
@@ -17,14 +17,14 @@
     justify-content: center;
 
     &:hover {
-        background-color: white;
+        background-color: whitesmoke;
         color: black;
         border: 1px solid black;
     }
 
     &.google-sign-in {
         background-color: #4285f4;
-        color: white;
+        color: whitesmoke;
 
         &.hover {
             background-color: #357ae8;
@@ -33,13 +33,13 @@
     }
 
     &.inverted {
-        background-color: white;
+        background-color: whitesmoke;
         color: black;
         border: 1px solid black;
 
         &:hover {
             background-color: black;
-            color: white;
+            color: whitesmoke;
             border: none;
         }
     }
