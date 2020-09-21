@@ -35,7 +35,6 @@ class SignIn extends React.Component {
         this.setState({email: '', password: ''})
     }
 
-    //this is the function that gathers the data from the input fields. we take in the name and value properties from the event target, which is the input element itself. this function can be used for both the email and password input onChange events.
 
     handleChange = event => {
         const {value, name} = event.target;
